@@ -1,5 +1,5 @@
-name: flutter_application_1
-description: "A new Flutter project."
+name: login_kiosk
+description: "A flutter application for event attendee's login purpose."
 
 # Prevent accidental publishing to pub.dev.
 publish_to: 'none'

@@ -1,6 +1,6 @@
 {
-  "appTitle": "flutter_application_1",
+  "appTitle": "Login Kiosk",
   "@appTitle": {
-    "description": "The title of the application"
+    "description": "A flutter application for event attendee's login purpose."
   }
 }
