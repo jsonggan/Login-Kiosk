@@ -51,10 +51,24 @@ class LoginView extends StatelessWidget {
                     SizedBox(
                       width: 400,
                       child: TextFormField(
-                        decoration: const InputDecoration(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: themeController.primaryColor,
+                              width: 1.0
+                            ),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: themeController.primaryColor,
+                              width: 1.0
+                            )),
                           labelText: 'PIN',
-                          border: OutlineInputBorder(),
+                          border: OutlineInputBorder(
+
+                          ),
                         ),
+                        
                         obscureText: false,
                       ),
                     ),
@@ -78,11 +92,11 @@ class LoginView extends StatelessWidget {
                           )
                         ),
                         child: const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 10),
+                          padding: EdgeInsets.symmetric(vertical: 16),
                           child: Text(
                             'Sign in',
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                             ),
                             ),
