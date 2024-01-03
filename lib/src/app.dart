@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
                     return const SampleItemDetailsView();
                   case SampleItemListView.routeName:
                   default:
-                    return const LoginView();
+                    return LoginView(themeController: themeController);
                 }
               },
             );

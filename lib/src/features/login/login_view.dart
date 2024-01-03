@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:login_kiosk/src/theme/theme_controller.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({
     super.key,
+    required this.themeController,
   });
 
   static const routeName = '/login';
+  final ThemeController themeController;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +71,7 @@ class LoginView extends StatelessWidget {
                           // Handle sign in
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.pink, 
+                          primary: themeController.primaryColor, 
                           onPrimary: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)
