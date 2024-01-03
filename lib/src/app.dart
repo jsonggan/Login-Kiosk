@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:login_kiosk/src/features/home/home_view.dart';
 import 'package:login_kiosk/src/features/login/login_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
@@ -48,6 +49,8 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SampleItemDetailsView.routeName:
                     return const SampleItemDetailsView();
+                  case HomeView.routeName:
+                    return HomeView(themeController: themeController);
                   case SampleItemListView.routeName:
                   default:
                     return LoginView(themeController: themeController);
