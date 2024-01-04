@@ -11,6 +11,7 @@ class ThemeController with ChangeNotifier {
   final ThemeService _themeService;
   
   Color get primaryColor => Color(int.parse(_currentTheme.primaryColor));
+  Color get primaryOnFocus => Color(int.parse(_currentTheme.primaryOnFocus));
 
   /// Load the theme from the ThemeService. 
   Future<void> loadSettings() async {

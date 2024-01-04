@@ -2,6 +2,6 @@
   "message": "Successfully retrieved theme information.",
   "theme": {
     "primary-color": "0xFFFF0052",
-    "background-color": "0xFFFFFFFF"
+    "primary-on-focus": "0xFFFFFFFF"
   }
 }
