@@ -5,8 +5,9 @@ import 'package:login_kiosk/src/features/user/home/home_view.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_view.dart';
 import 'package:login_kiosk/src/features/admin/login/login_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
+import 'package:flutter/services.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({
     super.key,
     required this.themeController,
@@ -15,9 +16,23 @@ class MyApp extends StatelessWidget {
   final ThemeController themeController;
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState(){
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+        DeviceOrientation.landscapeRight,
+        DeviceOrientation.landscapeLeft,
+    ]);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: themeController,
+      listenable: widget.themeController,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
           restorationScopeId: 'app',
@@ -46,11 +61,11 @@ class MyApp extends StatelessWidget {
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
                   case SelectEventView.routeName:
-                    return SelectEventView(themeController: themeController);
+                    return SelectEventView(themeController: widget.themeController);
                   case HomeView.routeName:
-                    return HomeView(themeController: themeController);
+                    return HomeView(themeController: widget.themeController);
                   default:
-                    return LoginView(themeController: themeController);
+                    return LoginView(themeController: widget.themeController);
                 }
               },
             );
