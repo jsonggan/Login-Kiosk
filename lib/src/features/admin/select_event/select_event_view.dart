@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:login_kiosk/src/view/layouts/admin_setup_layout.dart';
+import 'package:login_kiosk/src/view/widgets/primary_button.dart';
 
 class SelectEventView extends StatefulWidget {
   const SelectEventView({
@@ -100,28 +101,13 @@ class _SelectEventViewState extends State<SelectEventView> {
             children: [
               SizedBox(
                 width: 400,
-                child: ElevatedButton(
+                child: PrimaryButton(
                   onPressed: () {
-                    // Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/home');
                   },
-                  style: ElevatedButton.styleFrom(
-                    primary: widget.themeController.primaryColor, 
-                    onPrimary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5)
-                    )
+                  themeController: widget.themeController,
+                  title: "Next",
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16),
-                    child: Text(
-                      'Next',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      ),
-                  ),
-                ),
               ),
             ],
           ),

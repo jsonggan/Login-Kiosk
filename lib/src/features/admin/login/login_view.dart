@@ -14,8 +14,6 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double viewportHeight = MediaQuery.of(context).size.height;
-
     return AdminSetupLayout(child: LoginField(themeController: themeController));
   }
 }
@@ -44,7 +42,7 @@ class LoginField extends StatelessWidget {
                   'Sign in to FrontHAUS',
                   style: TextStyle(
                     fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w700,
                   ),
                   textAlign: TextAlign.left,
                 ),
@@ -72,11 +70,7 @@ class LoginField extends StatelessWidget {
                         width: 1.0
                       )),
                     labelText: 'PIN',
-                    border: OutlineInputBorder(
-    
-                    ),
                   ),
-                  
                   obscureText: false,
                 ),
               ),
@@ -97,7 +91,6 @@ class LoginField extends StatelessWidget {
               ),
             ],
           ),
-          
         ],
       ),
     );
