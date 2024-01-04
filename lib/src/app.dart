@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:login_kiosk/src/features/home/home_view.dart';
 import 'package:login_kiosk/src/features/select_event/select_event_view.dart';
 import 'package:login_kiosk/src/features/login/login_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
                   case SelectEventView.routeName:
                     return SelectEventView(themeController: themeController);
                   default:
-                    return SelectEventView(themeController: themeController);
+                    return HomeView(themeController: themeController);
                 }
               },
             );

@@ -7,7 +7,7 @@ class SelectEventView extends StatefulWidget {
     required this.themeController,
   });
 
-  static const routeName = '/home';
+  static const routeName = '/select_event';
   final ThemeController themeController;
 
   @override
