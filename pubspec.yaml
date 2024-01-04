@@ -38,6 +38,7 @@ flutter:
     - assets/images/login/
     - assets/images/home/
     - assets/vectors/scan_qr/
+    - assets/vectors/type_barcode/
 
   fonts:
     - family: Helvetica

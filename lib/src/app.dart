@@ -5,6 +5,7 @@ import 'package:login_kiosk/src/features/user/home/home_view.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_view.dart';
 import 'package:login_kiosk/src/features/admin/login/login_view.dart';
 import 'package:login_kiosk/src/features/user/scan_qr/scan_qr_view.dart';
+import 'package:login_kiosk/src/features/user/type_barcode/type_barcode_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:flutter/services.dart';
 
@@ -67,6 +68,8 @@ class _MyAppState extends State<MyApp> {
                     return HomeView(themeController: widget.themeController);
                   case ScanQrView.routeName:
                     return ScanQrView(themeController: widget.themeController);
+                  case TypeBarcodeView.routeName:
+                    return TypeBarcodeView(themeController: widget.themeController);
                   default:
                     return LoginView(themeController: widget.themeController);
                 }

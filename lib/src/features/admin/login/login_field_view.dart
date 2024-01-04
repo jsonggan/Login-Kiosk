@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:login_kiosk/src/features/admin/login/login_button_view.dart';
-import 'package:login_kiosk/src/features/admin/login/login_text_field_view.dart';
 import 'package:login_kiosk/src/features/admin/login/login_title_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:login_kiosk/src/view/widgets/text_input_field.dart';
 
 class LoginField extends StatefulWidget {
   const LoginField({
@@ -55,10 +55,10 @@ class _LoginFieldState extends State<LoginField> {
         children: <Widget>[
           const LoginTitleView(),
           const SizedBox(height: 20.0),
-          LoginTextFieldView(
-            themeController: widget.themeController,
-            onTextChanged: _updatePin,
-            ),
+          TextInputField(
+            themeController: widget.themeController, 
+            onTextChanged: _updatePin, 
+            labelText: "PIN"),
           const SizedBox(height: 16.0),
           LoginButtonView(
             themeController: widget.themeController,

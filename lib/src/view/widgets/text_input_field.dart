@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
-class LoginTextFieldView extends StatelessWidget {
-  const LoginTextFieldView({
+class TextInputField extends StatelessWidget {
+  const TextInputField({
     super.key,
     required this.themeController,
     required this.onTextChanged,
+    required this.labelText,
   });
 
   final ThemeController themeController;
   final Function(String) onTextChanged;
+  final String labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class LoginTextFieldView extends StatelessWidget {
                   color: themeController.primaryColor,
                   width: 1.0
                 )),
-              labelText: 'PIN',
+              labelText: labelText,
             ),
             obscureText: false,
             onChanged: (value) {

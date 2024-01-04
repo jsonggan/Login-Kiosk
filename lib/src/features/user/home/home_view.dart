@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
@@ -25,9 +24,9 @@ class HomeView extends StatelessWidget {
               color: Color(0xFFFFFFFF),
               fontSize: 34
               )),
-          const SizedBox(height: 24),
+          const SizedBox(height: 30),
           const Image(image: AssetImage("assets/images/home/qr_in_mail.png")),
-          const SizedBox(height: 24),
+          const SizedBox(height: 30),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -37,11 +36,11 @@ class HomeView extends StatelessWidget {
                 child: SecondaryButton(
                   themeController: themeController, 
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/type_barcode');
                   }, 
                   title: "Enter Barcode"),
               ),
-              const SizedBox(width: 20,),
+              const SizedBox(width: 24,),
               SizedBox(
                 width: 400,
                 child: PrimaryButton(
