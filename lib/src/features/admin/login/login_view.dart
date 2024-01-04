@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:login_kiosk/src/view/layouts/admin_setup_layout.dart';
+import 'package:login_kiosk/src/view/widgets/primary_button.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({
@@ -87,28 +88,12 @@ class LoginField extends StatelessWidget {
             children: [
               SizedBox(
                 width: 400,
-                child: ElevatedButton(
+                child: PrimaryButton(
+                  themeController: themeController,
+                  title: "Sign In",
                   onPressed: () {
                     Navigator.pushNamed(context, '/select_event');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: themeController.primaryColor, 
-                    onPrimary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5)
-                    )
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16),
-                    child: Text(
-                      'Sign in',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      ),
-                  ),
-                ),
+                  },),
               ),
             ],
           ),
@@ -118,3 +103,4 @@ class LoginField extends StatelessWidget {
     );
   }
 }
+
