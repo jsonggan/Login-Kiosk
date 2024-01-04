@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:login_kiosk/src/features/admin/select_event/select_event_button_view.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_dropdown_view.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_title_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:login_kiosk/src/view/layouts/admin_setup_layout.dart';
-import 'package:login_kiosk/src/view/widgets/primary_button.dart';
 
 class SelectEventView extends StatefulWidget {
   const SelectEventView({
@@ -30,7 +30,11 @@ class _SelectEventViewState extends State<SelectEventView> {
   void _selectEvent() {
     debugPrint("here is the event $_event");
     // call to api
-    Navigator.pushNamed(context, '/select_event');
+    if (_event.isNotEmpty) {
+      Navigator.pushNamed(context, '/home');
+    } else {
+      debugPrint('There is no selected event');
+    }
   }
 
   @override
@@ -47,18 +51,9 @@ class _SelectEventViewState extends State<SelectEventView> {
               themeController: widget.themeController,
               onChange: _updateEvent),
             const SizedBox(height: 16.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 400,
-                  child: PrimaryButton(
-                    onPressed: _selectEvent,
-                    themeController: widget.themeController,
-                    title: "Next",
-                    ),
-                ),
-              ],
+            SelectEventButtonView(
+              onPressed: _selectEvent, 
+              themeController: widget.themeController
             ),
           ],
         ),

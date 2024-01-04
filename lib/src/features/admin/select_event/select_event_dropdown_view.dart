@@ -41,7 +41,6 @@ class _SelectEventDropdownViewState extends State<SelectEventDropdownView> {
             enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: widget.themeController.primaryColor)),
             contentPadding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 16),
           ),
-          initialSelection: Event.sentosa,
           enableSearch: false,
           enableFilter: false,
           controller: eventController,
@@ -56,8 +55,6 @@ class _SelectEventDropdownViewState extends State<SelectEventDropdownView> {
               enabled: color.label != 'Grey',
             );
           }).toList(),
-
-          
         ),
       ],
     );
