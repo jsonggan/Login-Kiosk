@@ -47,6 +47,8 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SelectEventView.routeName:
                     return SelectEventView(themeController: themeController);
+                  case HomeView.routeName:
+                    return HomeView(themeController: themeController);
                   default:
                     return LoginView(themeController: themeController);
                 }
