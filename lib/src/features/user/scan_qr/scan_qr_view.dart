@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,7 +5,6 @@ import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:login_kiosk/src/view/layouts/background_image_layout.dart';
 import 'package:login_kiosk/src/view/widgets/back_to_home_button.dart';
 import 'package:login_kiosk/src/view/widgets/primary_button.dart';
-import 'package:login_kiosk/src/view/widgets/secondary_button.dart';
 
 class ScanQrView extends StatelessWidget {
   const ScanQrView({super.key, required this.themeController});
