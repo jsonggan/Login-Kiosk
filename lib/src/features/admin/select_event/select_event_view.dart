@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_kiosk/src/features/admin/select_event/select_event_dropdown_view.dart';
+import 'package:login_kiosk/src/features/admin/select_event/select_event_title_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:login_kiosk/src/view/layouts/admin_setup_layout.dart';
 import 'package:login_kiosk/src/view/widgets/primary_button.dart';
@@ -16,102 +18,50 @@ class SelectEventView extends StatefulWidget {
   State<SelectEventView> createState() => _SelectEventViewState();
 }
 
-// DropdownMenuEntry labels and values for the first dropdown menu.
-enum Event {
-  sentosa('SentosaFest'),
-  tech('TechWeek');
-
-  const Event(this.label);
-  final String label;
-}
-
 class _SelectEventViewState extends State<SelectEventView> {
-@override
-  Widget build(BuildContext context) {
-    final TextEditingController eventController = TextEditingController();
+  String _event = '';
 
-    Event? selectedColor;
-
-    return AdminSetupLayout(child: SelectEventField(eventController, selectedColor));
+  void _updateEvent(String event) {
+    setState(() {
+      _event = event;
+    });
   }
 
-  Expanded SelectEventField(TextEditingController eventController, Event? selectedColor) {
-    return Expanded(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 400,
-                child:  Text(
-                  'Select Event',
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.left,
+  void _selectEvent() {
+    debugPrint("here is the event $_event");
+    // call to api
+    Navigator.pushNamed(context, '/select_event');
+  }
+
+  @override
+    Widget build(BuildContext context) {
+      return AdminSetupLayout(
+        child: Expanded(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            const SelectEventTitleView(),
+            const SizedBox(height: 20.0),
+            SelectEventDropdownView(
+              themeController: widget.themeController,
+              onChange: _updateEvent),
+            const SizedBox(height: 16.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 400,
+                  child: PrimaryButton(
+                    onPressed: _selectEvent,
+                    themeController: widget.themeController,
+                    title: "Next",
+                    ),
                 ),
-              ),
-            ],
-          ),
-        
-          const SizedBox(height: 20.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              DropdownMenu<Event>(
-                width: 400,
-                inputDecorationTheme: InputDecorationTheme(
-                  enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: widget.themeController.primaryColor)),
-                  contentPadding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 16),
-                ),
-                initialSelection: Event.sentosa,
-                enableSearch: false,
-                enableFilter: false,
-                controller: eventController,
-                requestFocusOnTap: false,
-                label: const Text('Event'),
-                onSelected: (Event? color) {
-                  setState(() {
-                    selectedColor = color;
-                  });
-                },
-                dropdownMenuEntries: Event.values
-                    .map<DropdownMenuEntry<Event>>(
-                        (Event color) {
-                  return DropdownMenuEntry<Event>(
-                    value: color,
-                    label: color.label,
-                    enabled: color.label != 'Grey',
-                    // style: MenuItemButton.styleFrom(
-                    //   foregroundColor: color.color,
-                    // ),
-                  );
-                }).toList(),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 400,
-                child: PrimaryButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/home');
-                  },
-                  themeController: widget.themeController,
-                  title: "Next",
-                  ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-}
+              ],
+            ),
+          ],
+        ),
+      ));
+    }
 }
