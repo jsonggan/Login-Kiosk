@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({
+class SelectEventView extends StatefulWidget {
+  const SelectEventView({
     super.key,
     required this.themeController,
   });
@@ -11,7 +11,7 @@ class HomeView extends StatefulWidget {
   final ThemeController themeController;
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<SelectEventView> createState() => _SelectEventViewState();
 }
 
 // DropdownMenuEntry labels and values for the first dropdown menu.
@@ -24,7 +24,7 @@ enum Event {
   final Color color;
 }
 
-class _HomeViewState extends State<HomeView> {
+class _SelectEventViewState extends State<SelectEventView> {
 @override
   Widget build(BuildContext context) {
     final double viewportHeight = MediaQuery.of(context).size.height;
@@ -69,13 +69,17 @@ class _HomeViewState extends State<HomeView> {
                     DropdownMenu<Event>(
                       width: 400,
                       initialSelection: Event.sentosa,
+                      enableSearch: false,
+                      enableFilter: false,
+
+
                       controller: colorController,
                       // requestFocusOnTap is enabled/disabled by platforms when it is null.
                       // On mobile platforms, this is false by default. Setting this to true will
                       // trigger focus request on the text field and virtual keyboard will appear
                       // afterward. On desktop platforms however, this defaults to true.
-                      requestFocusOnTap: true,
-                      label: const Text('Color'),
+                      requestFocusOnTap: false,
+                      label: const Text('Event'),
                       onSelected: (Event? color) {
                         setState(() {
                           selectedColor = color;
