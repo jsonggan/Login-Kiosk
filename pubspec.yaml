@@ -15,6 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_secure_storage: ^9.0.0
+  flutter_svg: ^2.0.9
   fluttertoast: ^8.2.4
   http: ^1.1.2
   shared_preferences: ^2.2.2
@@ -36,6 +37,7 @@ flutter:
     - assets/images/
     - assets/images/login/
     - assets/images/home/
+    - assets/vectors/scan_qr/
 
   fonts:
     - family: Helvetica

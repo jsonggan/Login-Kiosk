@@ -47,7 +47,7 @@ class HomeView extends StatelessWidget {
                 child: PrimaryButton(
                   themeController: themeController, 
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/scan_qr');
                   }, 
                   title: 'Scan QR Code')
               ),
