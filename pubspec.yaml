@@ -34,3 +34,8 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/images/
     - assets/images/login/
+
+  fonts:
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/Helvetica.ttf

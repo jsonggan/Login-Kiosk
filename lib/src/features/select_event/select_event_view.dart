@@ -16,12 +16,11 @@ class SelectEventView extends StatefulWidget {
 
 // DropdownMenuEntry labels and values for the first dropdown menu.
 enum Event {
-  sentosa('SentosaFest', Colors.blue),
-  tech('TechWeek', Colors.grey);
+  sentosa('SentosaFest'),
+  tech('TechWeek');
 
-  const Event(this.label, this.color);
+  const Event(this.label);
   final String label;
-  final Color color;
 }
 
 class _SelectEventViewState extends State<SelectEventView> {
@@ -68,11 +67,13 @@ class _SelectEventViewState extends State<SelectEventView> {
                   children: [
                     DropdownMenu<Event>(
                       width: 400,
+                      inputDecorationTheme: InputDecorationTheme(
+                        enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: widget.themeController.primaryColor)),
+                        contentPadding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 16),
+                      ),
                       initialSelection: Event.sentosa,
                       enableSearch: false,
                       enableFilter: false,
-
-
                       controller: eventController,
                       requestFocusOnTap: false,
                       label: const Text('Event'),
@@ -88,9 +89,9 @@ class _SelectEventViewState extends State<SelectEventView> {
                           value: color,
                           label: color.label,
                           enabled: color.label != 'Grey',
-                          style: MenuItemButton.styleFrom(
-                            foregroundColor: color.color,
-                          ),
+                          // style: MenuItemButton.styleFrom(
+                          //   foregroundColor: color.color,
+                          // ),
                         );
                       }).toList(),
                     ),

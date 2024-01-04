@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           onGenerateTitle: (BuildContext context) =>
               AppLocalizations.of(context)!.appTitle,
 
-          theme: ThemeData(),
+          theme: ThemeData(fontFamily: 'Helvetica'),
           darkTheme: ThemeData.dark(),
 
           // Define a function to handle named routes in order to support
