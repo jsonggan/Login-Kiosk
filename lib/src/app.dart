@@ -5,9 +5,6 @@ import 'package:login_kiosk/src/features/select_event/select_event_view.dart';
 import 'package:login_kiosk/src/features/login/login_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
-
 class MyApp extends StatelessWidget {
   const MyApp({
     super.key,
@@ -47,11 +44,8 @@ class MyApp extends StatelessWidget {
               settings: routeSettings,
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
                   case SelectEventView.routeName:
                     return SelectEventView(themeController: themeController);
-                  case SampleItemListView.routeName:
                   default:
                     return SelectEventView(themeController: themeController);
                 }
