@@ -31,16 +31,19 @@ class _LoginFieldState extends State<LoginField> {
     debugPrint("here is the pin $_pin");
 
     // call to api
-    Navigator.pushNamed(context, '/select_event');
-    Fluttertoast.showToast(
-      msg: "Login button clicked",  // Customize this message as needed
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM,
-      timeInSecForIosWeb: 1,
-      backgroundColor: Colors.grey[800],
-      textColor: Colors.white,
-      fontSize: 16.0
-    );
+    if (_pin.isNotEmpty) {
+      Navigator.pushNamed(context, '/select_event');
+    } else {
+      Fluttertoast.showToast(
+        msg: "Please key in your pin",  
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.BOTTOM_RIGHT,
+        timeInSecForIosWeb: 2,
+        backgroundColor: Colors.grey[800],
+        textColor: Colors.white,
+        fontSize: 20.0
+      );
+    }
   }
 
   @override

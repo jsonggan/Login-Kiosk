@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_button_view.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_dropdown_view.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_title_view.dart';
@@ -33,7 +34,15 @@ class _SelectEventViewState extends State<SelectEventView> {
     if (_event.isNotEmpty) {
       Navigator.pushNamed(context, '/home');
     } else {
-      debugPrint('There is no selected event');
+      Fluttertoast.showToast(
+        msg: "Please select an event",  
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.BOTTOM_RIGHT,
+        timeInSecForIosWeb: 2,
+        backgroundColor: Colors.grey[800],
+        textColor: Colors.white,
+        fontSize: 20.0
+      );
     }
   }
 
