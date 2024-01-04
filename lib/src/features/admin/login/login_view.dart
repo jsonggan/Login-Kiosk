@@ -43,6 +43,8 @@ class _LoginFieldState extends State<LoginField> {
 
   void _signIn() {
     debugPrint("here is the pin $_pin");
+    // call to api
+    Navigator.pushNamed(context, '/select_event');
   }
 
   @override
