@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_kiosk/src/features/admin/login/login_title_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:login_kiosk/src/view/layouts/admin_setup_layout.dart';
 import 'package:login_kiosk/src/view/widgets/primary_button.dart';
@@ -33,23 +34,7 @@ class LoginField extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 400,
-                child:  Text(
-                  'Sign in to FrontHAUS',
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  textAlign: TextAlign.left,
-                ),
-              ),
-            ],
-          ),
-         
+          const LoginTitleView(),
           const SizedBox(height: 20.0),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

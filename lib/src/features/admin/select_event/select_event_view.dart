@@ -28,7 +28,6 @@ enum Event {
 class _SelectEventViewState extends State<SelectEventView> {
 @override
   Widget build(BuildContext context) {
-    final double viewportHeight = MediaQuery.of(context).size.height;
     final TextEditingController eventController = TextEditingController();
 
     Event? selectedColor;
