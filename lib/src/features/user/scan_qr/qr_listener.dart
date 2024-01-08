@@ -16,7 +16,7 @@ class _QrReaderViewState extends State<QrReaderView> {
 
   @override
   void dispose() {
-    _focusNode.dispose();
+    // _focusNode.dispose();
     super.dispose();
   }
 
@@ -30,9 +30,10 @@ class _QrReaderViewState extends State<QrReaderView> {
         print('Scanned QR Code: $_scannedCode');
         setState(() {
           _scannedCode = '';
-          _focusNode.unfocus();
         });
+        SystemChannels.textInput.invokeMethod('TextInput.hide');
         Navigator.pushNamed(context, "/success");
+        
       } else {
         // Check if the key is a character key
         final String keyLabel = key.keyLabel;
