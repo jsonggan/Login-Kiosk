@@ -29,7 +29,7 @@ class RoundedButton extends StatelessWidget {
           )
         ),
         child: SvgPicture.asset(
-          'assets/vectors/type_barcode/next.svg',
+          'assets/vectors/type_email/next.svg',
           semanticsLabel: 'Next'
         ),
       ),

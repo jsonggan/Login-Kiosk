@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:login_kiosk/src/features/user/type_barcode/rounded_button.dart';
-import 'package:login_kiosk/src/features/user/type_barcode/type_barcode_text_field_view.dart';
+import 'package:login_kiosk/src/features/user/type_email/rounded_button.dart';
+import 'package:login_kiosk/src/features/user/type_email/type_email_text_field_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
 class TextFieldWithButtonView extends StatefulWidget {
@@ -50,7 +50,7 @@ class _TextFieldWithButtonViewState extends State<TextFieldWithButtonView> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        TypeBarcodeTextFieldView(
+        TypeEmailTextFieldView(
           themeController: widget.themeController, 
           onTextChanged: _updateBarcode,
         ),

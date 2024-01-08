@@ -7,7 +7,7 @@ import 'package:login_kiosk/src/features/admin/select_event/select_event_view.da
 import 'package:login_kiosk/src/features/admin/login/login_view.dart';
 import 'package:login_kiosk/src/features/user/scan_qr/scan_qr_view.dart';
 import 'package:login_kiosk/src/features/user/success/success_view.dart';
-import 'package:login_kiosk/src/features/user/type_barcode/type_barcode_view.dart';
+import 'package:login_kiosk/src/features/user/type_email/type_email_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:flutter/services.dart';
 
@@ -70,8 +70,8 @@ class _MyAppState extends State<MyApp> {
                     return HomeView(themeController: widget.themeController);
                   case ScanQrView.routeName:
                     return ScanQrView(themeController: widget.themeController);
-                  case TypeBarcodeView.routeName:
-                    return TypeBarcodeView(themeController: widget.themeController);
+                  case TypeEmailView.routeName:
+                    return TypeEmailView(themeController: widget.themeController);
                   case SuccessView.routeName:
                     return SuccessView(themeController: widget.themeController);
                   case FailView.routeName:

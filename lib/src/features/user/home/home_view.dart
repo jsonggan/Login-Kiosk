@@ -19,10 +19,11 @@ class HomeView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Text(
-            "Find the event QR code in your registered email.",
+            "Show the event QR code in your registered email or\ntype in your email.",
+            textAlign: TextAlign.center,
             style: TextStyle(
               color: Color(0xFFFFFFFF),
-              fontSize: 34
+              fontSize: 34,
               )),
           const SizedBox(height: 30),
           const Image(image: AssetImage("assets/images/home/qr_in_mail.png")),
@@ -37,7 +38,7 @@ class HomeView extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, '/type_barcode');
                   }, 
-                  title: "Enter Barcode"),
+                  title: "Enter Email"),
               ),
               const SizedBox(width: 24,),
               SizedBox(

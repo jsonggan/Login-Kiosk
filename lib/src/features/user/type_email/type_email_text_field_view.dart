@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
-class TypeBarcodeTextFieldView extends StatelessWidget {
-  const TypeBarcodeTextFieldView({
+class TypeEmailTextFieldView extends StatelessWidget {
+  const TypeEmailTextFieldView({
     super.key,
     required this.themeController,
     required this.onTextChanged,
@@ -33,7 +33,7 @@ class TypeBarcodeTextFieldView extends StatelessWidget {
                   color: themeController.primaryColor,
                   width: 1.0
                 )),
-              labelText: 'PIN',
+              labelText: 'Email',
             ),
             obscureText: false,
             onChanged: (value) {

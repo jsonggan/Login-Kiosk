@@ -22,8 +22,12 @@ class QrCodeView extends StatelessWidget {
         maxHeight: screenHeight * 0.2, // Adjust this value as needed
       ),
       child: SvgPicture.asset(
-        'assets/vectors/type_barcode/qr_code.svg',
-        semanticsLabel: 'demo QR code'
+        'assets/vectors/type_email/email.svg',
+        semanticsLabel: 'Email address',
+        height: 150,
+        width: 150,
+        color: Colors.grey[200],
+        fit: BoxFit.fill,
       ),
     );
   }
