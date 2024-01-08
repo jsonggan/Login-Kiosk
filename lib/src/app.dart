@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                   case TypeBarcodeView.routeName:
                     return TypeBarcodeView(themeController: widget.themeController);
                   default:
-                    return TypeBarcodeView(themeController: widget.themeController);
+                    return ScanQrView(themeController: widget.themeController);
                 }
               },
             );
