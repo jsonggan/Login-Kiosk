@@ -76,8 +76,10 @@ class _MyAppState extends State<MyApp> {
                     return SuccessView(themeController: widget.themeController);
                   case FailView.routeName:
                     return FailView(themeController: widget.themeController);
+                  case LoginView.routeName:
+                    return LoginView(themeController: widget.themeController);
                   default:
-                    return FailView(themeController: widget.themeController);
+                    return LoginView(themeController: widget.themeController);
                 }
               },
             );
