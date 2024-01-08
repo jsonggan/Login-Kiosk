@@ -41,6 +41,7 @@ flutter:
     - assets/vectors/scan_qr/
     - assets/vectors/type_barcode/
     - assets/vectors/success/
+    - assets/vectors/fail/
 
   fonts:
     - family: Helvetica

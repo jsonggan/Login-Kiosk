@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:login_kiosk/src/features/user/fail/fail_view.dart';
 import 'package:login_kiosk/src/features/user/home/home_view.dart';
 import 'package:login_kiosk/src/features/admin/select_event/select_event_view.dart';
 import 'package:login_kiosk/src/features/admin/login/login_view.dart';
@@ -73,8 +74,10 @@ class _MyAppState extends State<MyApp> {
                     return TypeBarcodeView(themeController: widget.themeController);
                   case SuccessView.routeName:
                     return SuccessView(themeController: widget.themeController);
+                  case FailView.routeName:
+                    return FailView(themeController: widget.themeController);
                   default:
-                    return SuccessView(themeController: widget.themeController);
+                    return FailView(themeController: widget.themeController);
                 }
               },
             );
