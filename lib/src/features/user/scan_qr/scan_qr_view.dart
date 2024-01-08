@@ -61,4 +61,3 @@ class ScanQrView extends StatelessWidget {
     );
   }
 }
-

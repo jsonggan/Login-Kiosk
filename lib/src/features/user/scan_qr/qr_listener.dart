@@ -21,16 +21,18 @@ class _QrReaderViewState extends State<QrReaderView> {
   }
 
   void _handleKey(RawKeyEvent event) {
+    
     if (event is RawKeyDownEvent) {
       final key = event.data.logicalKey;
 
       if (key == LogicalKeyboardKey.enter) {
-        // back to default state when the enter key is pressed
-        debugPrint('Scanned QR Code: $_scannedCode');
-        Navigator.pushNamed(context, "/success");
+        // Do something when ENTER key is pressed
+        print('Scanned QR Code: $_scannedCode');
         setState(() {
           _scannedCode = '';
+          _focusNode.unfocus();
         });
+        Navigator.pushNamed(context, "/success");
       } else {
         // Check if the key is a character key
         final String keyLabel = key.keyLabel;
@@ -63,4 +65,3 @@ class _QrReaderViewState extends State<QrReaderView> {
     );
   }
 }
-
