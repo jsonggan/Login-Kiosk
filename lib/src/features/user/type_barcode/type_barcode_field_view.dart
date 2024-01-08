@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:login_kiosk/src/features/user/type_barcode/rounded_button.dart';
 import 'package:login_kiosk/src/features/user/type_barcode/text_field_with_button_view.dart';
 import 'package:login_kiosk/src/features/user/type_barcode/type_barcode_qr_code_view.dart';
-import 'package:login_kiosk/src/features/user/type_barcode/type_barcode_text_field_view.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 
 class TypeBarcodeFieldView extends StatelessWidget {

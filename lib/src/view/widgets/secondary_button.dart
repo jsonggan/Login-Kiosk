@@ -4,12 +4,10 @@ import 'package:login_kiosk/src/theme/theme_controller.dart';
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton({
     super.key,
-    required this.themeController,
     required this.onPressed,
     required this.title,
   });
 
-  final ThemeController themeController;
   final VoidCallback onPressed;
   final String title;
   

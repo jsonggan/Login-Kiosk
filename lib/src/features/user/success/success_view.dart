@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
-import 'package:login_kiosk/src/view/layouts/background_image_layout.dart';
+import 'package:login_kiosk/src/view/layouts/background_image_home_button_layout.dart';
 
 class SuccessView extends StatelessWidget {
   const SuccessView({super.key, required this.themeController});
@@ -12,7 +12,7 @@ class SuccessView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundImageLayout(
+    return BackgroundImageHomeButtonLayout(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

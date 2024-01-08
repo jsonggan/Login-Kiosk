@@ -34,7 +34,6 @@ class HomeView extends StatelessWidget {
               SizedBox(
                 width: 400,
                 child: SecondaryButton(
-                  themeController: themeController, 
                   onPressed: () {
                     Navigator.pushNamed(context, '/type_barcode');
                   }, 
