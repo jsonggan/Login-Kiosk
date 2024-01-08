@@ -27,7 +27,7 @@ class _QrReaderViewState extends State<QrReaderView> {
       if (key == LogicalKeyboardKey.enter) {
         // back to default state when the enter key is pressed
         debugPrint('Scanned QR Code: $_scannedCode');
-        Navigator.pushNamed(context, "/home");
+        Navigator.pushNamed(context, "/success");
         setState(() {
           _scannedCode = '';
         });

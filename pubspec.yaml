@@ -18,6 +18,7 @@ dependencies:
   flutter_svg: ^2.0.9
   fluttertoast: ^8.2.4
   http: ^1.1.2
+  loading_animation_widget: ^1.2.0+4
   shared_preferences: ^2.2.2
 
 dev_dependencies:
@@ -39,6 +40,7 @@ flutter:
     - assets/images/home/
     - assets/vectors/scan_qr/
     - assets/vectors/type_barcode/
+    - assets/vectors/success/
 
   fonts:
     - family: Helvetica
