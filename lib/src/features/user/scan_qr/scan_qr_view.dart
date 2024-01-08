@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:login_kiosk/src/features/user/scan_qr/qr_text_field_view.dart';
+import 'package:login_kiosk/src/features/user/scan_qr/qr_listener.dart';
 import 'package:login_kiosk/src/theme/theme_controller.dart';
 import 'package:login_kiosk/src/view/layouts/background_image_layout.dart';
 import 'package:login_kiosk/src/view/widgets/back_to_home_button.dart';
