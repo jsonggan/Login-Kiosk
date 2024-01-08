@@ -31,7 +31,7 @@ class _TextFieldWithButtonViewState extends State<TextFieldWithButtonView> {
 
     // call to api
     if (_barcode.isNotEmpty) {
-      Navigator.pushNamed(context, '/home');
+      Navigator.pushNamed(context, '/fail');
     } else {
       Fluttertoast.showToast(
         msg: "Please key in your barcode",  
