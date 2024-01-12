@@ -1,0 +1,7 @@
+{
+  "message": "Successfully retrieved theme information.",
+  "theme": {
+    "primary-color": "0xFFFF0052",
+    "primary-on-focus": "0xFFFFFFFF"
+  }
+}

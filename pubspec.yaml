@@ -14,6 +14,12 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_secure_storage: ^9.0.0
+  flutter_svg: ^2.0.9
+  fluttertoast: ^8.2.4
+  http: ^1.1.2
+  loading_animation_widget: ^1.2.0+4
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -30,3 +36,19 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - assets/images/login/
+    - assets/images/home/
+    - assets/vectors/scan_qr/
+    - assets/vectors/type_email/
+    - assets/vectors/success/
+    - assets/vectors/fail/
+
+  fonts:
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/Helvetica.ttf
+          weight: 500
+        - asset: assets/fonts/Helvetica-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Helvetica-light.ttf
+          weight: 200
